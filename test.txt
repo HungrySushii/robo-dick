@@ -1,1 +1,81 @@
-abc
+"""
+PS C:\Users\sushi\OneDrive\Desktop\gitRepo\local_repo> python -i creating_classes.py
+>>> civic = Car('4-cylinder', ['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger'])
+>>> civic
+<__main__.Car object at 0x000001CB63FA3C40>
+>>> civic.engine
+'4-cylinder'
+>>> civic.tires
+['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger']
+>>> civic.license_plate = 'something'
+>>> civic.license_plate
+'something'
+>>> exit()
+PS C:\Users\sushi\OneDrive\Desktop\gitRepo\local_repo> python -i creating_classes.py
+>>> civic = Car('4-cylinder', ['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger'])
+>>> civic.tires
+['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger']
+>>> civic.description
+<bound method Car.description of <__main__.Car object at 0x000002A678D13C40>>
+>>> civic.description()
+A car with an 4-cylinder engine, and ['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger'] tires
+>>>
+"""
+
+"""
+PS C:\Users\sushi\OneDrive\Desktop\gitRepo\local_repo> python -i tire.py
+>>> tire = SnowTire('P', 205, 65, 15, 2)
+>>> tire
+P205/65R15 (Snow)
+>>> exit()
+PS C:\Users\sushi\OneDrive\Desktop\gitRepo\local_repo> python -i car.py
+>>> from tire import Tire, SnowTire
+>>> tire = SnowTire('P', 205, 65, 15, 2)
+>>> tires = [tire, tire, tire, tire]
+>>> honda = Car(tires=tires, engine='4-cylinder')
+>>> honda.wheel_circumference()
+92.7
+>>> honda.description()
+A car with an 4-cylinder engine, and [P205/65R15 (Snow), P205/65R15 (Snow), P205/65R15 (Snow), P205/65R15 (Snow)] tires
+>>>
+"""
+
+pip list # to check installed python package
+pip freezze > requirements.txt
+pip install --user -r requirements.txt # to check installed python package and put into text file
+
+Creating python virtual environments:
+$ mkdir ~/venvs
+$ python3.7 -m venv ~/venvs/pg
+$ source ~/venvs/pg
+$ source ~/venvs/pg/bin
+$ source ~/venvs/pg/bin/activate
+$ which python
+$ which pip
+$ deactivate 
+
+# installing and using pipenv
+$ pip3.7 install --user pipenv 
+$ mkdir database
+$ cd database 
+$ pipenv --python python3.7
+$ ls 
+$ cat Pipfile
+$ pipenv shell 
+$ pipenv install psycopg2
+$ ls
+$ cat Pipfile.lock
+$ cat Pipfile
+$ exit 
+
+
+
+
+
+
+
+
+
+
+
+
